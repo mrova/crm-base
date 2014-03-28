@@ -1,0 +1,581 @@
+* { font-size: 14px; font-family: Monospace;}
+
+html, body {
+	height: 100%;
+	margin: 0;
+	overflow: hidden;
+	padding: 0;
+}
+
+#appLayout {
+	height: 100%;
+}
+#leftCol {
+	width: 14em;
+}
+
+.rss {
+	background-color: #d0e9fc;
+}
+
+:focus {
+	outline: none;
+}
+
+/* grid */
+.grid {
+	width:100%;
+	border-spacing:0;
+	margin:0;
+	padding:0;
+}
+
+.grid th,
+.grid td {
+	text-align: left;
+	padding: 2px 2px 2px 4px;
+	border-bottom: 1px solid #EDEDED;
+	border-right: 1px solid #EDEDED;
+	cursor:pointer;
+}
+
+.grid th {
+	text-align: left;
+	padding: 2px 2px 2px 4px;
+	border-bottom: 1px solid #EDEDED;
+	border-right: 1px solid #EDEDED;
+}
+.grid th.sortable {
+	cursor:pointer;
+	background:url(/gfx/icoSortable.png) no-repeat 100% 50%;
+	padding-right: 25px;
+}
+
+.grid th.sortable.asc {
+	text-decoration: underline;
+	background:url(/gfx/icoSortableAsc.png) no-repeat 100% 50%;
+}
+.grid th.sortable.desc {
+	text-decoration: underline;
+	background:url(/gfx/icoSortableDesc.png) no-repeat 100% 50%;
+}
+
+
+.grid .left {
+	text-align: left;
+}
+
+.grid .right {
+	text-align: right;
+}
+
+.grid .actions {
+	padding:2px;
+}
+
+.grid .actions a {
+	position: relative;
+	top: 2px;
+}
+
+.grid .actions,
+.grid .center {
+	text-align: center;
+}
+
+.grid td.actions {
+	width: 18px;
+}
+
+.grid ._no {
+	width: 30px;
+}
+
+.grid tr.even td {
+	background-color: #F7F7F7;
+}
+
+.grid tr:hover td,
+.grid tr.even:hover td {
+	background-color: rgb(255, 234, 252);
+}
+
+.grid tr td.full_name {
+	font-weight: bold;
+}
+
+.grid tr.child td {
+	font-style: italic;
+	font-weight: normal;
+	color: #4b4b4b;
+}
+
+.grid tr.child td.full_name {
+	padding-left: 1em;
+}
+
+.grid thead {
+	border: 1px solid #AAA;
+	background: #CCC url(/gfx/ui-bg_highlight-soft_75_cccccc_1x100.png) 50% 50% repeat-x;
+	color: #222;
+	font-weight: bold;
+}
+
+.grid thead tr th:first-child,
+.grid tbody tr td:first-child {
+	border-left: 1px solid #EDEDED;
+}
+
+.grid>tbody tr:hover td,
+.grid>tbody tr.even:hover td {
+	background-color: rgb(255, 234, 252);
+}
+
+/* navigation */
+#navTop {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
+
+/* error message */
+.error {
+	text-align: center;
+	border: 2px solid red;
+	padding: 1em;
+	margin: 1em 0;
+	width: 347px;
+	color: red;
+	font-weight: bold;
+}
+
+/* forms */
+
+form {
+	overflow: auto;
+}
+
+label {
+	width: 210px;
+	display: inline-block;
+	line-height: 100%;
+	vertical-align: bottom;
+	cursor:pointer;
+	border-bottom: 1px dashed #E2E2E2;
+}
+fieldset {
+	border: 0;
+	padding: 0.5em 0;
+	border-bottom: 1px solid #7EABCD;
+}
+
+.line-bottom {
+	border-bottom: 1px solid #7EABCD;
+	padding-bottom: 11px;
+	margin-bottom: 10px;
+}
+
+.line-top {
+	border-top: 1px solid #7EABCD;
+	padding-top: 11px;
+	margin-top: 10px;
+}
+
+fieldset>div {
+	padding: 2px 0 3px 0;
+}
+
+fieldset.buttons {
+	padding-bottom: 0;
+}
+
+div.submit { float: right; }
+
+label abbr {
+	color: #f00;
+	padding-left: 2px;
+}
+
+.dijitTextArea[cols],
+.dijitTextArea,
+textarea {
+	margin: 0;
+	padding: 0;
+	width: 212px;
+	min-height: 60px;
+}
+
+.dijitTextArea[cols],
+.dijitTextArea,
+textarea,
+.dijitTextArea[cols].double,
+.dijitTextArea.double,
+textarea.double {
+	width: 636px;
+	min-height: 120px;
+	max-height: 300px;
+}
+
+/* login form */
+#contentWrapper {
+	width: 347px;
+	margin: auto;
+	margin-top: 5em;
+}
+#formLogin {
+	width: 347px;
+	border:1px solid #B3B3B3;
+	padding: 1em;
+}
+
+/* tundra */
+.dijitDialog {
+	width: 100%;
+	height: 100%;
+}
+.dijitDialogUnderlay {
+	background-color:#757575;
+}
+.tundra .dijitDialogCloseIcon {
+	right: 7px;
+	top: 7px;
+}
+
+.tundra .dijitValidationTextBoxError .dijitValidationIcon {
+	top: -1px;
+	position: relative;
+	right: 1px;
+}
+
+/* details */
+
+.details ul {
+	list-style-type: none;
+}
+
+.details ul li {
+	padding: 4px 0;
+}
+
+.details ul li span {
+	/* like label */
+	width: 210px;
+	display: inline-block;
+	border-bottom: 1px dashed #E2E2E2;
+	line-height: 100%;
+	vertical-align: bottom;
+	cursor:default;
+}
+
+.details ul li:hover span a,
+.details ul li:hover span {
+	border-color: #000;
+	color:#000;
+}
+
+.details ul li strong {
+	border-bottom: 1px dashed #BE4B4B;
+	color: #0D3C5F;
+}
+.details ul li strong a {
+	padding-left: 14px;
+	background: url(/gfx/icoEmail.png) no-repeat 0 4px;
+	color: #0D3C5F;
+	text-decoration:none;
+}
+
+.details ul li.bigtext span {
+	float:left;
+}
+
+.details ul li.bigtext strong {
+	border-bottom: 0;
+	display: block;
+}
+.details ul li.bigtext div {
+	margin-left:219px;
+}
+
+
+.details ul li:hover strong {
+	color:#000;
+	background-color: #f1f1f1;
+}
+
+.details ul li.empty span {
+	color: #aaa;
+}
+
+/* pagination */
+.pagination {
+	border-top: 1px solid black;
+	padding: 7px 0;
+}
+.pagination em {
+	font-weight: bold;
+	font-size:1.1em;
+	font-style: normal;
+}
+.pagination a {
+	color: #0D3C5F;
+	text-decoration:none;
+}
+.pagination a:hover {
+	text-decoration:underline;
+}
+.filters label {
+	width: 115px;
+	border-bottom: 0;
+}
+
+.dojoxCheckedMultiSelectHidden {
+	display: none;
+}
+
+#dashboard table {
+	margin-bottom: 2em;
+}
+
+#dashboard .current thead {
+	background: #c1dba2 url(/gfx/ui-bg_highlight-soft_75_c1dba2_1x100.png) 50% 50% repeat-x;
+}
+#dashboard .outdated thead {
+	background: #eac1c1 url(/gfx/ui-bg_highlight-soft_75_eac1c1_1x100.png) 50% 50% repeat-x;
+}
+#dashboard .future thead {
+	background: #cab4e6 url(/gfx/ui-bg_highlight-soft_75_cab4e6_1x100.png) 50% 50% repeat-x;
+}
+
+#dashboard caption {
+	text-align: left;
+	font-size: 1.2em;
+	padding: 5px 0 2px 2px;
+	font-weight: bold;
+	color: rgb(66, 66, 66);
+	text-shadow: 2px 2px 2px rgb(209, 209, 209);
+	letter-spacing: 2px;
+}
+
+#dashboard caption label {
+	font-size: 1.2em;
+	width: auto;
+	border-bottom: none;
+}
+#dashboard caption label input {
+	position:relative;
+	top: 1px;
+	margin-right: 7px;
+}
+
+#dashboard caption a img {
+	position:relative;
+	top: 4px;
+}
+
+/*
+#dashboard .current caption {
+	color: rgb(52, 80, 19);
+}
+
+#dashboard .outdated caption {
+	color: rgb(162, 42, 42);
+}
+
+#dashboard .future caption {
+	color: rgb(115, 17, 240);
+}
+*/
+.grid .type {
+	width: 100px;
+}
+
+.grid .contractor {
+	width: 20%;
+}
+
+.grid .time,
+.grid .date {
+	width: 130px;
+	padding-right: 5px;
+}
+.grid .time {
+/*	width: 60px;
+	text-align: right;
+	 */
+}
+
+.grid th {
+	text-shadow: 1px 1px 1px rgb(236, 236, 236);
+}
+#dashboard .grid thead th {
+	padding: 10px 5px;
+}
+
+.grid tr.highlight td {
+	background-color: rgb(252, 246, 118);
+}
+
+#acl_table td,
+#acl_table th {
+	cursor:pointer;
+}
+#acl_table tbody td,
+#acl_table thead {
+	text-align: center;
+}
+
+#acl_table thead th.resource,
+#acl_table tbody th {
+	text-align: left;
+	font-weight: normal;
+}
+
+/* tri-state checkbox */
+/* TriStateCheckBox
+ *
+ * Styling TriStateCheckBox mainly includes:
+ *
+ * 1. Containers
+ * 		.dojoxTriStateCheckBox|.dojoxTriStateCheckBoxIcon - for border, padding, width|height and background image
+ *
+ * 2. Checked state
+ * 		.dojoxTriStateCheckBoxChecked - for checked background-color|image
+ * 		.dojoxTriStateCheckBoxMixed - for mixed background-color|image
+ *
+ * 3. Hover state
+ * 		.dojoxTriStateCheckBoxHover|.dojoxTriStateCheckBoxCheckedHover|.dojoxTriStateCheckBoxMixedHover - for background image
+ *
+ * 4. Disabled state
+ * 		.dojoxTriStateCheckBoxDisabled|.dojoxTriStateCheckBoxCheckedDisabled|.dojoxTriStateCheckBoxMixedDisabled - for background image
+ */
+.tundra .dojoxTriStateCheckBox, .tundra .dojoxTriStateCheckBoxIcon {
+background-image: url('/gfx/tristatecheckboxStates.png');
+/* checkbox sprite image */
+
+background-repeat: no-repeat;
+width: 15px;
+height: 16px;
+margin: 0 2px 0 0;
+padding: 0;
+}
+.dj_ie6 .tundra .dojoxTriStateCheckBox, .dj_ie6 .tundra .dojoxTriStateCheckBoxIcon {
+background-image: url('/gfx/tristatecheckboxStates.png');
+/* checkbox sprite image */
+
+}
+.tundra .dojoxTriStateCheckBox{
+/* unchecked */
+
+background-position: -15px;
+}
+.tundra .dojoxTriStateCheckBoxChecked{
+/* checked */
+
+background-position: 0px;
+}
+.tundra .dojoxTriStateCheckBoxMixed {
+/* mixed */
+
+background-position: -30px;
+}
+.tundra .dojoxTriStateCheckBoxDisabled {
+/* disabled and unchecked */
+
+background-position: -105px;
+}
+.tundra .dojoxTriStateCheckBoxCheckedDisabled {
+/* disabled and checked */
+
+background-position: -90px;
+}
+.tundra .dojoxTriStateCheckBoxMixedDisabled {
+/* disabled and mixed */
+
+background-position: -120px;
+}
+.tundra .dojoxTriStateCheckBoxHover {
+/* hovering over and unchecked */
+
+background-position: -60px;
+}
+.tundra .dojoxTriStateCheckBoxCheckedHover {
+/* hovering over and checked */
+
+background-position: -45px;
+}
+.tundra .dojoxTriStateCheckBoxMixedHover {
+/* hovering over and mixed */
+
+background-position: -75px;
+}
+
+.dijit_a11y .dojoxTriStateCheckBoxHover .dojoxTriStateCheckBoxInner,
+.dijit_a11y .dojoxTriStateCheckBoxFocused .dojoxTriStateCheckBoxInner{
+	/* focused or hovering over */
+	border: dashed;
+}
+
+.dijit_a11y .dojoxTriStateCheckBoxHover .dojoxTriStateCheckBoxInner,
+.dijit_a11y .dojoxTriStateCheckBoxFocused .dojoxTriStateCheckBoxInner{
+	/* focused or hovering over */
+	border: solid;
+}
+
+.dijit_a11y .dojoxTriStateCheckBoxDisabled .dojoxTriStateCheckBoxInner{
+	/* focused or hovering over */
+	opacity: 0.5;
+}
+
+.dj_ie .dijit_a11y .dojoxTriStateCheckBoxDisabled .dojoxTriStateCheckBoxInner{
+	/* disabled */
+}
+
+
+.dojoxTriStateCheckBoxInner{
+/* inner text */
+
+visibility: hidden;
+display: none;
+	position: absolute;
+	text-align: center;
+}
+
+.dijit_a11y .dojoxTriStateCheckBoxInner{
+/* inner text */
+
+visibility: visible;
+	display: block;
+}
+
+.dojoxTriStateCheckBoxInput {
+	/* place the actual input on top, but all-but-invisible */
+	opacity: 0.01;
+	padding: 0;
+	margin: 0,
+	border: 0;
+	width: 15px;
+	height: 16px;
+	background-position:center center;
+	background-repeat:no-repeat;
+}
+
+.dj_ie .dojoxTriStateCheckBoxInput {
+	filter: alpha(opacity=0);
+}
+
+.export {
+	position: relative;
+	top: 8px;
+	left: 10px;
+}
+
+@media print {
+/* printer styles */
+
+.print caption {
+	text-align: left;
+}
+.print caption a {
+	display: none;
+}
+}

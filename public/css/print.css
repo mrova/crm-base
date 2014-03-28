@@ -1,0 +1,40 @@
+td.type,
+th.type,
+td.date,
+th.date {
+	width: 125px;
+}
+
+
+td,
+th,
+caption {
+	text-align: left;
+	font-weight: normal;
+	padding: 2px 2px 2px 2px;
+}
+caption {
+	font-weight: bold;
+}
+
+table {
+	border-spacing: 0;
+	width: 100%;
+	margin: 2em 0;
+}
+
+table tr th,
+table tr td {
+	border-bottom: 1px solid #000;
+}
+
+table thead tr th  {
+		background-color: #F5F5F5;
+		height: 30px;
+}
+
+input,
+.actions,
+caption a {
+	display: none;
+}
